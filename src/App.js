@@ -1,29 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from 'react';
+import './css/style.css';
+
+//import { Router } from 'express'; //default
+
+// import Router
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+// import Pages
+import Home from "./Pages/Home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" /> 
-        <p>
-          Jau tik nepisk man proto
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-
-
-
-
-        
-        </a>
-      </header>
-    </div>
+    <React.StrictMode>
+      <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+          </Switch>
+      </Router>
+    </React.StrictMode>
   );
 }
+/* 
+            <Route exact path="/react-hooks" component={ReactHooks} />
+            <Route exact path="/form-example" component={FormExample} />
 
+
+*/
 export default App;
