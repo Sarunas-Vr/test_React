@@ -1,6 +1,5 @@
 
 import React from 'react';
-import './css/style.css';
 
 //import { Router } from 'express'; //default
 
@@ -8,14 +7,13 @@ import './css/style.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import Pages
-import Home from "./Pages/Home";
 
 function App() {
   return (
     <React.StrictMode>
       <Router>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={} />
           </Switch>
       </Router>
     </React.StrictMode>
